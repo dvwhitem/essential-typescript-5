@@ -11,3 +11,9 @@ let sumPrices = (...numbers) => numbers.reduce((total, val) => total + (Number.i
 
 let total = sumPrices(...prices)
 console.log(`Total: ${total} type: ${typeof total}`)
+
+let [,, three] = names
+console.log(`Names 3d element: Three: ${three}`)
+
+let [, ...highest] = prices.sort((a, b) => a-b)
+highest.forEach(price => console.log(`High price: ${price}`))
