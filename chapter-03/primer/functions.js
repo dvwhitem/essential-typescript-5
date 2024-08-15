@@ -2,11 +2,7 @@
 //     return first + second + third
 // }
 
-function sumPrices(...numbers) {
-    return  numbers.reduce(function (total, val) {
-        return total + (Number.isNaN(Number(val)) ? 0 : Number(val))
-    }, 0)
-}
+let sumPrices = (...numbers) => numbers.reduce((total, val) => total + (Number.isNaN(Number(val)) ? 0 : Number(val)))
 
 let hatPrice = 100
 console.log(`Hat price: (${typeof hatPrice}) ${hatPrice}`)
