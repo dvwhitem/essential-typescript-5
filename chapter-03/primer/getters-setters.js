@@ -1,3 +1,5 @@
+//'use strict'
+
 let hat = {
     name: 'Hat',
     _price: 100,
@@ -10,6 +12,10 @@ let hat = {
 
     get price() {
         return this._price
+    },
+
+    writeDetails() {
+        console.log(`${this.name}: ${this.price}, ${this.priceIncTax}`)
     }
 }
 let boots = {
@@ -21,10 +27,15 @@ let boots = {
     }
 }
 
-console.log(`Hat: ${hat.price}, ${hat.priceIncTax}`)
-hat.price = 120
-console.log(`Hat: ${hat.price}, ${hat.priceIncTax}`)
+// console.log(`Hat: ${hat.price}, ${hat.priceIncTax}`)
+// hat.price = 120
+// console.log(`Hat: ${hat.price}, ${hat.priceIncTax}`)
 
 console.log(`Boots: ${boots.price}, ${boots.priceIncTax}`)
 boots.price = 120
 console.log(`Boots: ${boots.price}, ${boots.priceIncTax}`)
+
+hat.writeDetails = hat.writeDetails.bind(hat)
+hat.writeDetails()
+hat.price = 120
+hat.writeDetails()
