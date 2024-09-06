@@ -19,7 +19,8 @@ TaxedProduct.prototype.getPriceIncTax = function () {
 }
 
 TaxedProduct.prototype.toTaxString = function () {
-    return `${this.toString()}, Tax: ${this.getPriceIncTax()}`
+    let chainResult = Product.prototype.toString.call(this)
+    return `${chainResult}, Tax: ${this.getPriceIncTax()}`
 }
 
 let hat = new TaxedProduct('Hat', 100, 1.5)
@@ -27,3 +28,7 @@ let boots = new Product('Boots', 180)
 
 console.log(hat.toTaxString())
 console.log(boots.toString())
+console.log(`hat and TaxedProduct: ${hat instanceof TaxedProduct}`)
+console.log(`hat and Product: ${hat instanceof Product}`)
+console.log(`boots and TaxedProduct: ${boots instanceof TaxedProduct}`)
+console.log(`boots and Product: ${boots instanceof Product}`)
