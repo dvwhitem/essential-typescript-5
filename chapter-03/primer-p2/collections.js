@@ -18,4 +18,3 @@ Object.keys(data)
     .forEach(key =>
         console.log(`Key: ${key} Value: ${data[key].toString()}`)
     )
-
