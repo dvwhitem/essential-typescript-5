@@ -54,14 +54,15 @@ console.log('----------------------------------------------');
 [...createProductGenerator()].forEach(p => console.log(p.toString()))
 
 class GiftPack {
-    constructor(name, prod1, prod2, prod3) {
+    constructor(name, prod1, prod2, prod3, prod4) {
         this.name = name
         this.prod1 = prod1
         this.prod2 = prod2
         this.prod3 = prod3
+        this.prod4 = prod4
     }
     getTotalPrice() {
-        return [this.prod1, this.prod2, this.prod3]
+        return [this.prod1, this.prod2, this.prod3, this.prod4]
             .reduce((total, p) => total + p.price, 0)
     }
 
@@ -69,12 +70,14 @@ class GiftPack {
         yield  this.prod1
         yield  this.prod2
         yield  this.prod3
+        yield  this.prod4
     }
 
     *[Symbol.iterator]() {
         yield  this.prod1
         yield  this.prod2
         yield  this.prod3
+        yield  this.prod4
     }
 }
 console.log('----------------------------------------------');
@@ -83,7 +86,8 @@ let winter = new GiftPack(
     'winter',
     new Product('Hat', 100),
     new Product('Boots', 80),
-    new Product('Gloves', 25)
+    new Product('Gloves', 25),
+    new Product('T-Shirt', 900)
 )
 
 console.log(`Total price: ${winter.getTotalPrice()}`);
