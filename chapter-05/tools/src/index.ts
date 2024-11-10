@@ -1,8 +1,11 @@
-function printMessage(msg: string): void {
-    console.log(`Message: ${ msg }`)
-}
+let printMessage = (msg: string): void =>
+    console.log(`Message: ${msg}`)
 
-printMessage('Hello, TypeScript')
-printMessage('100')
-printMessage('It is sunny day')
-//printMessage('100')
+let message = ("Hello, TypeScript")
+printMessage(message)
+
+let data = new Map()
+data.set('Bob', 'London')
+data.set('Alice', 'Paris')
+
+data.forEach((val, key) => console.log(`${key} lives in ${val}`))
