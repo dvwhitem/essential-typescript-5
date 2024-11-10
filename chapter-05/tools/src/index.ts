@@ -3,3 +3,6 @@ function printMessage(msg: string): void {
 }
 
 printMessage('Hello, TypeScript')
+printMessage('100')
+printMessage('It is sunny day')
+//printMessage('100')
