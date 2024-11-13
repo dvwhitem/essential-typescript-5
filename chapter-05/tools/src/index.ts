@@ -1,3 +1,5 @@
+import {sum} from './calc'
+
 let printMessage = (msg: string): void =>
     console.log(`Message: ${msg}`)
 
@@ -9,3 +11,6 @@ data.set('Bob', 'London')
 data.set('Alice', 'Paris')
 
 data.forEach((val, key) => console.log(`${key} lives in ${val}`))
+
+let total = sum(120, 130, 350)
+console.log(`total: ${total}`)

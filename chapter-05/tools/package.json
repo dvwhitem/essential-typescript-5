@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc-watch --onsuccess \"node dist/index\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx tsc-watch --onsuccess \"node dist/index.js\""
   },
   "keywords": [],
   "author": "",
@@ -13,5 +12,6 @@
   "devDependencies": {
     "tsc-watch": "^6.2.0",
     "typescript": "^5.6.3"
-  }
+  },
+  "type": "commonjs"
 }
