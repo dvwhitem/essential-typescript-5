@@ -1,4 +1,5 @@
-import {sum} from './calc'
+import {sum} from './calc.js'
+
 
 let printMessage = (msg: string): void =>
     console.log(`Message: ${msg}`)
@@ -6,7 +7,7 @@ let printMessage = (msg: string): void =>
 let message = ("Hello, TypeScript")
 printMessage(message)
 
-debugger
+debugger //eslint-disable-line no-debugger
 
 let total = sum(123, 127, 300)
 console.log(`Total: ${total}`)
