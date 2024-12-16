@@ -37,7 +37,7 @@ next-env.d.ts
 service-account.json
 
 ### IntelliJ IDEA ###
-.idea
+../../.idea
 *.iws
 *.iml
 *.ipr
