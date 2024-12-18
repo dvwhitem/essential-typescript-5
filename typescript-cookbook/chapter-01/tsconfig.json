@@ -5,5 +5,8 @@
     "rootDir": "./src",
     "noEmitOnError": true,
     "module": "CommonJS",
+//    "allowJs": true,
+//    "checkJs": false,
+//    "noEmit": true
   }
 }
