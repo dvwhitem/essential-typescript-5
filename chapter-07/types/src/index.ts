@@ -30,3 +30,16 @@ let halfShare = taxAmount / 2
 console.log(`Price: ${price}`)
 console.log(`Full amount in tax: ${taxAmount}`)
 console.log(`Half share: ${halfShare}`)
+
+console.log('------- Union of types ---------')
+
+function calculateTax3(amount: number, format: boolean): string | number {
+    const calcAmount = amount * 1.2
+    return format ? `$${calcAmount.toFixed(2)}`: calcAmount
+}
+
+let textNumber: string | number = calculateTax3(100, false)
+let textString: string | number = calculateTax3(100, true)
+
+console.log('Text string:', textString)
+console.log('Text number', textNumber)
